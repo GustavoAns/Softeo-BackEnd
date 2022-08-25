@@ -13,7 +13,7 @@ class App {
 
   public startServer(port = 3001) {
     mongoose.connect(vars.mongodb_connect_url)
-    const actualPort = vars.api.port || port;
+    const actualPort = vars.api.port || process.env.PORT || port;
     return this.app.listen(
       actualPort,
       () => console.log('Estamos online na porta: ', actualPort),
