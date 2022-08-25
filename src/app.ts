@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express, { Router } from 'express';
 import mongoose from 'mongoose';
 import vars from './vars'
@@ -9,6 +10,7 @@ class App {
   constructor() {
     this.app = express();
     this.app.use(express.json());
+    this.app.use(cors());
   }
 
   public startServer(port = 3001) {
