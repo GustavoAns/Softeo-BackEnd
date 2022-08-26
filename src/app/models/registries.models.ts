@@ -26,6 +26,11 @@ export class RegistriesModels {
     this.model = mongoose.model('Registries', RegistriesSchema)
   }
 
+  public async addRegistry(obj: IRegistros): Promise<IRegistros> {
+    const registries = await this.model.create(obj)
+    return registries
+  }
+
   public async listRegistries(): Promise<IRegistros[]> {
     const registries = await this.model.find()
     return registries

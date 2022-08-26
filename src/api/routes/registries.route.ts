@@ -22,7 +22,7 @@ registriesRoute.delete('/:id', async (req, res) => {
 
 //addRegistry
 registriesRoute.post('/', async (req, res) => {
-  res.send(req)
+  registriesControllers.addRegistry(req, res)
 })
 //listRegistries
 registriesRoute.get('/', async (req, res) => {

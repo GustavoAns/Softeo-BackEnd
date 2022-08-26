@@ -6,7 +6,7 @@ export interface IPayment {
 }
 
 export interface IRegistros {
-  _id: number,
+  _id?: number,
   cpf: number,
   initialDate: string,
   name: string,
