@@ -26,6 +26,11 @@ export class RegistriesModels {
   constructor() {
     this.model = mongoose.model('Registries', RegistriesSchema)
   }
+
+  public async removeRegistryById(id:string): Promise<IRegistros | null>  {
+    const registries = await this.model.findByIdAndDelete({ _id: id })
+    return registries
+  }
   
   public async editRegistryById(obj: IRegistros, id:string): Promise<IRegistros | null>  {
     const registries = await this.model.findByIdAndUpdate({ _id: id }, obj);

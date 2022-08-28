@@ -12,6 +12,14 @@ export class RegistriesControllers {
   constructor() {
     this.service = new RegistriesServides()
   }
+  public async removeRegistryById(req: Request, res: Response<IRegistros | IResError>): Promise<typeof res> {
+    const registries = await this.service.removeRegistryById(req.params.id)
+    if (!registries) {
+      return res.status(404).json({ error: '_id não encontrado' })
+    } else {
+      return res.status(200).json(registries)
+    }
+  }
 
   public async editRegistryById(req: Request, res: Response<IRegistros | IResError>): Promise<typeof res> {
     const registries = await this.service.editRegistryById(req.body, req.params.id)
