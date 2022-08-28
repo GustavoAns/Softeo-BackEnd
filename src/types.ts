@@ -1,7 +1,8 @@
 export interface IPayment {
   number: number,
-  value: number 
+  value: number,
   paid: boolean,
+  method: string,
   limiteDate: string
 }
 
@@ -13,5 +14,9 @@ export interface IRegistros {
   value: number,
   totalInstallments: number,
   payments: IPayment[],
+}
+
+export interface IResError {
+  error: string,
 }
 

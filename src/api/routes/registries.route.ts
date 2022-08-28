@@ -10,9 +10,9 @@ registriesRoute.get('/:id', async (req, res) => {
   res.send(req)
 })
 
-//editRegistry
+//editRegistryById
 registriesRoute.put('/:id', async (req, res) => {
-  res.send(req)
+  registriesControllers.editRegistryById(req, res)
 })
 
 //removeRegistry
