@@ -7,7 +7,7 @@ export interface IPayment {
 }
 
 export interface IRegistros {
-  _id?: number,
+  _id?: string,
   cpf: number,
   initialDate: string,
   name: string,
@@ -17,6 +17,12 @@ export interface IRegistros {
 }
 
 export interface IResError {
-  error: string,
+  error: boolean,
+  message?: string
 }
+
+export interface IYupError {
+  errors: string
+}
+
 
