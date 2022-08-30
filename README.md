@@ -19,7 +19,6 @@ Como bibliotecas de CSS .
 
 Deploy do Projeto: 
 Front: https://softeo-frontend.herokuapp.com/
-Back: https://softeo-backend.herokuapp.com/
 
 ---
 
