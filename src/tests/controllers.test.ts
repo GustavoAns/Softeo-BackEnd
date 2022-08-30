@@ -10,7 +10,7 @@ const res: any = {}
 
 const mockObj = {
     "_id": "6309251bc9f2634ef681c774",
-    "cpf": 12345678910,
+    "cpf": '12345678910',
     "initialDate": "2022-08-26T19:55:04.800Z",
     "name": "Gustavo Anselmo",
     "value": 100,

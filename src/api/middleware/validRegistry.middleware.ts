@@ -3,7 +3,7 @@ import { IRegistros } from '../../types';
 
 const schema = yup.object().shape({
   _id: yup.string(),
-  cpf: yup.number().required(),
+  cpf: yup.string().required(),
   initialDate: yup.string().required(),
   name: yup.string().required(),
   value: yup.number().required(),

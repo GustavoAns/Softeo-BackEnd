@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import { IPayment, IRegistros } from '../../types'
 
 const RegistriesSchema = new mongoose.Schema<IRegistros>({
-  cpf: Number,
+  cpf: String,
   initialDate: String,
   name: String,
   value: Number,

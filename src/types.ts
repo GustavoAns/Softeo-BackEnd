@@ -8,7 +8,7 @@ export interface IPayment {
 
 export interface IRegistros {
   _id?: string,
-  cpf: number,
+  cpf: string,
   initialDate: string,
   name: string,
   value: number,
